@@ -1,10 +1,29 @@
 header {
+  position: fixed;
+  width: 100%;
   nav {
+    background-color: #4d77b1;
     .navbar-brand {
       font-size: 25px;
+      color: white;
     }
     .navbar-nav {
       font-size: 16px;
+      color: white;
+    }
+
+    a.nav-link {
+      color: white;
+    }
+
+    a.nav-link:hover {
+      color: rgb(211, 211, 211);
+    }
+
+    button.navbar-toggler {
+      background-color: white;
+      color: transparent;
+      outline: none;
     }
   }
 }

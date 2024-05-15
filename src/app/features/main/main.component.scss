@@ -1,0 +1,27 @@
+main {
+  width: 100%;
+  height: 100%;
+  .mainHeader {
+    width: 100%;
+    height: 675px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #7fa8e2;
+
+    .textSection {
+      color: ghostwhite;
+      font-size: 1.1rem;
+      width: 320px;
+      max-width: 320px;
+    }
+
+    .logoSection {
+      img {
+        border-radius: 3.5px;
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+}
