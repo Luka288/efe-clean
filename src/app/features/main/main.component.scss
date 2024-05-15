@@ -12,8 +12,12 @@ main {
     .textSection {
       color: ghostwhite;
       font-size: 1.1rem;
-      width: 320px;
-      max-width: 320px;
+      width: 350px;
+      max-width: 350px;
+
+      h2 {
+        color: ghostwhite;
+      }
     }
 
     .logoSection {
@@ -21,6 +25,20 @@ main {
         border-radius: 3.5px;
         width: 200px;
         height: 200px;
+      }
+    }
+  }
+
+  .aboutSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    .text {
+      width: 100%;
+      p {
+        width: 575px;
       }
     }
   }
