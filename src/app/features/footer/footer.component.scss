@@ -4,9 +4,23 @@ footer {
   background-color: black;
 
   .text {
+    display: flex;
+    justify-content: center;
     ul {
+      display: grid;
+      grid-template-columns: repeat(2, 0fr);
+      gap: 30px;
       li {
         list-style: none;
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
+
+        p {
+          color: white;
+        }
       }
     }
   }
