@@ -79,4 +79,13 @@ main {
       }
     }
   }
+
+  .photosContainer {
+    mat-grid-list {
+      mat-grid-tile {
+        img {
+        }
+      }
+    }
+  }
 }
