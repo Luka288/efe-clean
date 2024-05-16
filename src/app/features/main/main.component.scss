@@ -58,4 +58,25 @@ main {
       }
     }
   }
+
+  .offer {
+    .container {
+      .header {
+        display: flex;
+        justify-content: center;
+        font-weight: 500;
+      }
+
+      .offersContainer {
+        ul {
+          li {
+            p {
+              font-size: 26px;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+  }
 }
