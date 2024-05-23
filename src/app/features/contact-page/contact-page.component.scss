@@ -1,15 +1,24 @@
 main {
   padding-top: 100px;
 
-  .wrapper {
+  .formSection {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
-    .formSection {
-      form {
+    .text {
+      text-align: center;
+    }
+    .wrapper {
+      .example-form {
         display: flex;
         flex-direction: column;
+        width: 500px;
+
+        input {
+          width: 500px;
+        }
       }
     }
   }

@@ -1,7 +1,15 @@
 <main>
   <section class="formSection">
+    <div class="text">
+      <h1>We are glad to see you</h1>
+      <h3>Send us your application we will answer you soon</h3>
+    </div>
     <div class="wrapper">
-      <form class="example-form" [formGroup]="signUpForm">
+      <form
+        class="example-form"
+        [formGroup]="signUpForm"
+        (submit)="emailService($event)"
+      >
         <mat-form-field class="example-full-width">
           <mat-label>Name</mat-label>
           <input
@@ -49,6 +57,19 @@
           <mat-error>Please enter more then 2 characters</mat-error>
           }
         </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Give us some info</mat-label>
+          <textarea
+            matInput
+            placeholder="Provide info about your place"
+            [formGroup]="signUpForm"
+            formControlName="description"
+          ></textarea>
+          @if (signUpForm.get("description")?.hasError("required")) {
+          <mat-error>Please provide some info about your place</mat-error>
+          }
+        </mat-form-field>
+        <input type="submit" value="Send" />
       </form>
     </div>
   </section>
