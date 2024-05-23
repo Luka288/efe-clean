@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
+import {MatInputModule} from '@angular/material/input';
+import { FormBuilder, FormsModule, ReactiveFormsModule  } from "@angular/forms";
 
 @Component({
   selector: 'app-contact-page',
   standalone: true,
-  imports: [],
+  imports: [MatInputModule, FormsModule, ReactiveFormsModule],
   templateUrl: './contact-page.component.html',
   styleUrl: './contact-page.component.scss'
 })
-export class ContactPageComponent {
+export default class ContactPageComponent {
 
 }
