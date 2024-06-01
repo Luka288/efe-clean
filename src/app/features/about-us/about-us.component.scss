@@ -1,0 +1,29 @@
+main {
+  display: flex;
+  justify-content: center;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    .headerText {
+      text-align: center;
+      color: cadetblue;
+      font-size: 40px;
+      width: 100%;
+    }
+
+    .mainContent {
+      h3 {
+        font-size: 30px;
+      }
+    }
+
+    .footerContnet {
+      text-align: center;
+      h3 {
+        font-size: 24px;
+      }
+    }
+  }
+}

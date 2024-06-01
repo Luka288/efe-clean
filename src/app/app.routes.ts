@@ -12,7 +12,13 @@ export const routes: Routes = [
         title: 'Efe Clean | contact'
     },
     {
+        path: 'about-us',
+        loadComponent: () => import('./features/about-us/about-us.component'),
+        title: 'Efe - Clean | About Us'
+    },
+    {
         path: '**',
-        loadComponent: () => import('./features/not-found/not-found.component')
+        loadComponent: () => import('./features/not-found/not-found.component'),
+        title: 'Efe - Clean | 404 Not found'
     }
 ];
