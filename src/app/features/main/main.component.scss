@@ -23,10 +23,11 @@ main {
     .logoSection {
       width: 320px;
       max-width: 320px;
+      display: flex;
+      justify-content: left;
       img {
-        border-radius: 3.5px;
-        width: 200px;
-        height: 200px;
+        border-radius: 150%;
+        height: 675px;
       }
     }
   }
@@ -81,9 +82,18 @@ main {
   }
 
   .photosContainer {
+    padding-top: 50px;
+    text-align: center;
+
+    h1 {
+      font-size: 40px;
+      color: cadetblue;
+    }
     mat-grid-list {
       mat-grid-tile {
         img {
+          width: 100%;
+          object-fit: cover;
         }
       }
     }
