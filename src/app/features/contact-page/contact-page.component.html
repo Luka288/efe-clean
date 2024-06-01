@@ -5,7 +5,12 @@
       <h3>Send us your application we will answer you soon</h3>
     </div>
     <div class="wrapper">
-      <form class="example-form" [formGroup]="signUpForm">
+      <form
+        class="example-form"
+        [formGroup]="signUpForm"
+        action="javascript:void(0)"
+        (submit)="emailSend()"
+      >
         <mat-form-field class="example-full-width">
           <mat-label>Name</mat-label>
           <input
@@ -19,6 +24,23 @@
           <mat-error>Name is <strong>required</strong></mat-error>
           } @if (signUpForm.get("firstName")?.hasError("minLength")) {
           <mat-error>Please enter more then 2 characters</mat-error>
+          }
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label
+            >Last name <span class="optional">(optional)</span></mat-label
+          >
+          <input
+            type="text"
+            matInput
+            placeholder="Last name (optional)"
+            [formGroup]="signUpForm"
+            formControlName="lastName"
+          />
+          @if (signUpForm.get("lastName")?.hasError("minLength")) {
+          <mat-error>Please enter more then 2 characters</mat-error>
+          } @if (signUpForm.get("lastName")?.hasError("maxLength")) {
+          <mat-error>Please enter less then 16 characters</mat-error>
           }
         </mat-form-field>
         <mat-form-field class="example-full-width">

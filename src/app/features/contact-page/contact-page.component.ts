@@ -19,53 +19,36 @@ import { Target } from '@angular/compiler';
 export default class ContactPageComponent {
   private readonly fb = inject(FormBuilder)
 
-  private readonly userID = 'M6lXw60kHrTBq4rzm'
-
   readonly signUpForm =this.fb.group({
-    firstName: new FormControl('asdasd', [
+    firstName: new FormControl('', [
       Validators.required,
       Validators.minLength(2),
       Validators.maxLength(16),
     ]),
-    email: new FormControl('asdasd@gmail.com', [
+    lastName: new FormControl('', [
+      Validators.minLength(2),
+      Validators.maxLength(16),
+    ]),
+    email: new FormControl('', [
       Validators.required,
       Validators.email,
     ]),
-    phone: new FormControl('12312321', [Validators.required, Validators.minLength(2)]),
-    description: new FormControl('test test test', [
+    phone: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    description: new FormControl('', [
       Validators.required,
       Validators.minLength(10)
     ])
   })
 
+emailSend(){
+  emailjs.send("service_6maur7m","template_skrl3dc",{
+    from_name: this.signUpForm.value.firstName,
+    Last_name: this.signUpForm.value.lastName,
+    reply_to: this.signUpForm.value.email,
+    user_mobile: this.signUpForm.value.phone,
+    message: this.signUpForm.value.description,
+    });
+}
 
-  
-
-  // !! finding way to send email working on it ! 
-
-  // emailService(event: SubmitEvent){
-  //   event.preventDefault();
-  //   if(this.signUpForm.valid){
-  //     const values = {
-  //       firstName: this.signUpForm.get('firstName')?.value,
-  //       email: this.signUpForm.get('email')?.value,
-  //       phone: this.signUpForm.get('phone')?.value,
-  //       description: this.signUpForm.get("description")?.value
-  //     }
-
-  //     emailjs
-  //     .send('service_j8gjr1z', 'template_skrl3dc', values, this.userID)
-  //     .then(
-  //       () => {
-  //         console.log(this.signUpForm.value)
-  //         console.log('SUCCESS!',);
-  //       },
-  //       (error) => {
-  //         console.log('FAILED...', (error as EmailJSResponseStatus).text);
-  //       },
-  //     );
-  
-  //   }
-  // }
 }
 
