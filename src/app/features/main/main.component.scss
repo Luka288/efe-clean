@@ -27,7 +27,8 @@ main {
       justify-content: left;
       img {
         border-radius: 150%;
-        height: 675px;
+        width: 100%;
+        max-width: 400px;
       }
     }
   }
@@ -96,6 +97,61 @@ main {
           object-fit: cover;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  main {
+    .mainHeader {
+      .logoSection {
+        img {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  main {
+    .aboutSection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 104%;
+
+      .showCase {
+        display: grid;
+      }
+    }
+
+    .offer {
+      padding-top: 104%;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  main {
+    .aboutSection {
+      padding-top: 105%;
+    }
+
+    .offer {
+      padding-top: 105%;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  main {
+    .aboutSection {
+      padding-top: 105%;
+    }
+
+    .offer {
+      padding-top: 105%;
     }
   }
 }
